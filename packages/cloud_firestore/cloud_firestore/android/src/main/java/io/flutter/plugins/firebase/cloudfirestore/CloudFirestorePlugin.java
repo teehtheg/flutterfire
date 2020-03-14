@@ -607,7 +607,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
         {
           final Map<String, Object> arguments = call.arguments();
           final Transaction transaction = getTransaction(arguments);
-          Log.i(TAG, "Transaction#update" + transaction.);
+          Log.i(TAG, "Transaction#update");
           new AsyncTask<Void, Void, Void>() {
             @SuppressWarnings("unchecked")
             @Override

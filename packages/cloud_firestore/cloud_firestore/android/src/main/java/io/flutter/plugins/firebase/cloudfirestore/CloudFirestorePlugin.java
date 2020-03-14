@@ -585,7 +585,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
                         result.success(snapshotMap);
                       }
                     });
-              } catch (final Exception e) {
+              } catch (final Throwable e) {
                 activity.runOnUiThread(
                     new Runnable() {
                       @Override
@@ -617,7 +617,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
                         result.success(null);
                       }
                     });
-              } catch (final Exception e) {
+              } catch (final Throwable e) {
                 activity.runOnUiThread(
                     new Runnable() {
                       @Override

@@ -590,6 +590,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
                       }
                     });
               } catch (final Throwable e) {
+                transaction._
                 activity.runOnUiThread(
                     new Runnable() {
                       @Override

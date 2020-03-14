@@ -474,7 +474,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
           final Task<Map<String, Object>> transactionTCSTask = transactionTCS.getTask();
 
           final Map<String, Object> arguments = call.arguments();
-          Log.i(TAG, "Firestore#runTransaction");
+          Log.i(TAG, "Firestore#runTransaction for transactionId: " + (Integer) arguments.get("transactionId"));
           getFirestore(arguments)
               .runTransaction(
                   new Transaction.Function<TransactionResult>() {
@@ -564,7 +564,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
         {
           final Map<String, Object> arguments = call.arguments();
           final Transaction transaction = getTransaction(arguments);
-          Log.i(TAG, "Transaction#get");
+          Log.i(TAG, "Transaction#get for transactionId: " + (Integer) arguments.get("transactionId"));
           new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {
@@ -607,7 +607,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
         {
           final Map<String, Object> arguments = call.arguments();
           final Transaction transaction = getTransaction(arguments);
-          Log.i(TAG, "Transaction#update");
+          Log.i(TAG, "Transaction#update for transactionId: " + (Integer) arguments.get("transactionId"));
           new AsyncTask<Void, Void, Void>() {
             @SuppressWarnings("unchecked")
             @Override
@@ -640,7 +640,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
         {
           final Map<String, Object> arguments = call.arguments();
           final Transaction transaction = getTransaction(arguments);
-          Log.i(TAG, "Transaction#set");
+          Log.i(TAG, "Transaction#set for transactionId: " + (Integer) arguments.get("transactionId"));
           new AsyncTask<Void, Void, Void>() {
             @SuppressWarnings("unchecked")
             @Override
@@ -673,7 +673,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
         {
           final Map<String, Object> arguments = call.arguments();
           final Transaction transaction = getTransaction(arguments);
-          Log.i(TAG, "Transaction#delete");
+          Log.i(TAG, "Transaction#delete for transactionId: " + (Integer) arguments.get("transactionId"));
           new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {

@@ -492,7 +492,7 @@ public class CloudFirestorePlugin implements MethodCallHandler {
                           new Runnable() {
                             @Override
                             public void run() {
-                              Log.i(TAG, "Run transaction with id " + transactionId);
+                              Log.i(TAG, "Run transaction");
                               channel.invokeMethod(
                                   "DoTransaction",
                                   arguments,
